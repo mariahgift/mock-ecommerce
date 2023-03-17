@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+
 // import Skeleton from "react-loading-skeleton";
 
 const ProductDetails = () => {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
+
 
   useEffect(() => {
     const getProduct = async () => {
@@ -50,7 +52,7 @@ const ProductDetails = () => {
                </p>
              <h3 className="display-6 fw-bold my-4">{product.price}</h3>
              <h3 className="lead">{product.description}</h3>
-             <button className="btn btn-outline-info">Add to cart</button>
+            
              <NavLink to="/cart" className="btn btn-warning m-2">
               Go to Cart
              </NavLink>

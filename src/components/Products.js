@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { Cartcontext } from "../context/Context";
+
 
 const Products = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
+  const Globalstate = useContext(Cartcontext);
+  const dispatch = Globalstate.dispatch;
+  
   let componentMounted = true;
 
   useEffect(() => {
@@ -64,6 +69,7 @@ const Products = () => {
                     <NavLink to={`/products/${product.id}`} className="btn btn-outline-info">
                       Buy Now
                     </NavLink>
+                    <button className="btn btn-outline-info" onClick={()=>dispatch({type:'AddToCart', payload: product})}>Add to cart</button>
                   </div>
                 </div>
               </div>
@@ -89,3 +95,5 @@ const Products = () => {
 };
 
 export default Products;
+
+
