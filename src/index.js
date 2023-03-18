@@ -8,7 +8,7 @@ import { Context } from "./context/Context";
 import App from "./App";
 
 ReactDOM.render(
-  <Router basename="/mock-ecommerce">
+  <Router>
     <Context>
       <App />
     </Context>
