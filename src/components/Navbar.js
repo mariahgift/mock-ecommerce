@@ -6,9 +6,9 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
         <div className="container">
-          <a className="navbar-brand fw-bold" to="#">
+          <NavLink className="navbar-brand fw-bold">
             E Commerce
-          </a>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -31,7 +31,7 @@ const Navbar = () => {
 
             <div classNameName="buttons">
                 <NavLink to="/cart" className="btn btn-outline-dark ms-2">
-                    <i className="fa fa-shopping-cart me-1"> Cart (0)</i>
+                    <i className="fa fa-shopping-cart me-1"> Cart</i>
                 </NavLink>
             </div>
 

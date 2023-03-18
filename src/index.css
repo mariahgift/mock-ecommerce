@@ -1,1 +1,9 @@
 
+a:link {
+    text-decoration: none;
+}
+
+.img-thumbnail {
+    width: 200px;
+    height: 200px;
+}
