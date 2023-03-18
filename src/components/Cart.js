@@ -28,7 +28,8 @@ const Cart = () => {
           </table>
         {state.map((product, index) => {
           return (
-            <table class="table">
+            <table>
+ <tbody>
               <tr>
                 <td>
                   <img
@@ -75,13 +76,15 @@ const Cart = () => {
                   </button>
                 </td>
               </tr>
+            </tbody>
             </table>
+           
           );
         })}
 
         {state.length > 0 && (
           <div className="total">
-            <h2 className="text-right">{total}</h2>
+            <p className="text-right fw-bold h2">{total}</p>
           </div>
         )}
       </div>
