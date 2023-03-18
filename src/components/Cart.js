@@ -84,7 +84,7 @@ const Cart = () => {
 
         {state.length > 0 && (
           <div className="total">
-            <p className="text-right fw-bold h2">{total}</p>
+            <p className="text-right fw-bold h2"> Total: {total}</p>
           </div>
         )}
       </div>

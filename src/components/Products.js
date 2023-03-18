@@ -9,10 +9,11 @@ const Products = () => {
   const Globalstate = useContext(Cartcontext);
   const dispatch = Globalstate.dispatch;
 
-  let componentMounted = true;
+
 
   useEffect(() => {
     const getProducts = async () => {
+      let componentMounted = true;
       setLoading(true);
       const response = await fetch("https://fakestoreapi.com/products");
 
@@ -28,7 +29,7 @@ const Products = () => {
       };
     };
     getProducts();
-  }, []);
+  }, [filter]);
 
   const Loading = () => {
     return <>Loading ...</>;
